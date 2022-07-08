@@ -15,7 +15,6 @@ export default function StartGameScreen({onPickNumber}) {
 
   function confirmInputHandler() {
     const chosenNumber = parseInt(enteredNumber);
-
     if (isNaN(chosenNumber) || chosenNumber <= 0 || chosenNumber > 99) {
       Alert.alert(
         'Invalid number', 
@@ -23,7 +22,6 @@ export default function StartGameScreen({onPickNumber}) {
         [{text: 'Okay', style: 'destructive', onPress: resetInputHandler}]);
       return;
     }
-
     onPickNumber(chosenNumber);
   }
 
